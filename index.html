@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my HTML</title>
+</head>
+<body>
+    <h1 style="text-align: center;font-size: 4rem;">THE TIME YOU SPENT!!!</h1>
+    
+    <h2 style="text-align: center;font-size: 2rem;" id="years"></h2>
+    <h2 style="text-align: center;font-size: 2rem;" id="months"></h2>
+    <h2 style="text-align: center;font-size: 2rem;" id="weeks"></h2>
+    <h2 style="text-align: center;font-size: 2rem;" id="days"></h2>
+    <h2 style="text-align: center;font-size: 2rem;" id="seconds"></h2>
+    <h2 style="text-align: center;font-size: 2rem;" id="milliseconds"></h2>
+
+    <p style="text-align: center;margin-top: 50px;"> <span style="color: blueviolet;font-size: 2rem;font-weight: bold;">https://github.com/SURYAsbs</span> <br/> <span style="color:royalblue;font-size: 2rem;font-weight: bold;">https://www.linkedin.com/in/balasurya-s-0b09a8230</span> </p>
+
+    <script>
+        var todayDate = new Date();
+
+        var yourDate = prompt("Enter your date:"); 
+        var yourMonth = prompt("Enter your month:");
+        var yourYear = prompt("Enter your Year:");
+        var myDate = new Date(yourYear,yourMonth,yourDate);
+
+        document.getElementById("years").innerHTML ="You lived "+Math.floor(((todayDate - myDate)/(365*24*60*60*1000)))+" years";
+        document.getElementById("weeks").innerHTML ="You lived "+Math.floor(((todayDate - myDate)/(52*24*60*60*1000)))+" weeks";
+        document.getElementById("months").innerHTML ="You lived "+Math.floor(((todayDate - myDate)/(12*24*60*60*1000)))+" months";
+        document.getElementById("days").innerHTML ="You lived "+Math.floor(((todayDate - myDate)/(24*60*60*1000)))+" days";
+        document.getElementById("seconds").innerHTML ="You lived "+((todayDate - myDate)/1000)+" seconds";
+        document.getElementById("milliseconds").innerHTML ="You lived "+(todayDate - myDate)+" milliseconds";
+    </script>
+</body>
+</html>
